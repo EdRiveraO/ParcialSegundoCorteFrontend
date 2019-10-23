@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <style>
+      
+      ol#playlist {
+  list-style-type: none;
+  margin-left: 0;
+  width: 370px;
+  padding-left: 0;
+  position: absolute;
+  height: 550px;
+  margin: 0;
+  font-size: 16px;
+  overflow-y: auto;
+  transition: transform 0.4s ease-in-out, 0s box-shadow 0.3s;
+  border-radius: 10px;
+  background-color: rgb(45, 45, 45);
+  box-shadow: 3px 25px 50px 6px rgba(202, 199, 199, 0.1);
+}
+
+
+ol#playlist > li {
+  counter-increment: customlistcounter;
+  padding: 12px 15px;
+  height: 50px;
+  position: relative;
+}
+        
+ol#playlist > li:after {
+  position: absolute;
+  width: 300px;
+  left: 9.5%;
+  display: block;
+  bottom: 0;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.1);
+}
+ol#playlist > li:before {
+  content: counter(customlistcounter) " ";
+  text-align: right;
+  width: 1em;
+  margin-right: 1em;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.3;
+  vertical-align: baseline;
+  display: inline-block;
+  color: white;
+}   
+ol#playlist > li:last-child:after {
+  border-color: transparent;
+}
+
+ol#playlist > li:hover {
+  background-color: rgba(201, 201, 201, 0.02);
+  cursor: pointer;
+}
+ol#playlist h3 {
+  display: inline-block;
+  width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.6;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 15px;
+    padding-left: 20px;
+    color: white;
+}
+ol#playlist > li.playing {
+  background-color: rgba(79, 190, 255, 0.39);
+}
+
+ol#playlist > li.playing:after {
+  border-color: transparent;
+}
+
+ol#playlist > li.playing:hover {
+  background-color: rgba(79, 182, 236, 0.2);
+}  
+        
+        
+        </style>
+   
+    <ol id="playlist">
+         
+    </ol> 
+   
+</body>
+</html>

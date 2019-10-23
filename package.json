@@ -1,0 +1,23 @@
+{
+  "name": "parcial2",
+  "version": "1.0.0",
+  "description": "Parcial 2: Web Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016\u0016https://github.com/Khaymera/Parcial-2.git"
+  },
+  "author": "Khaymera & Edwin",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {}
+}

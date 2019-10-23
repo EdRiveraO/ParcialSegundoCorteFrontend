@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="import" href="./Components/Drag&Drop/drag.html">
+    <link rel="import" href="./Components/ReproductorVideo/repro.html">
+    <link rel="import" href="./Components/ListaReproduccion/listica.html">
+</head>
+<body>
+
+        <style>
+        
+        body{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FF564C;
+            
+                }
+                #zonarepro{
+                    position: absolute;
+                    top: 2%;
+                    right: 30%;
+                }
+                
+                #ZonaDrop{
+                    position: absolute;
+                    /* bottom: 30%; */
+                    bottom: 1px;
+                    left: 4%;
+                    width: 10%;
+                    /* display: flex;
+                    justify-content: center;
+                    justify-items: center;
+                    align-content: center;
+                    align-items: center; */
+                }
+                
+                #zonaLista{
+                    position: absolute;
+                    right: 29%;
+                    top:2%;
+                }
+            </style>
+
+        <el-repro id="zonarepro"> </el-repro>
+
+
+
+        <zona-drop id="ZonaDrop" ></zona-drop>
+
+        <la-lista id="zonaLista"></la-lista>
+
+   <!-- <script src="./Components/ReproductorVideo/src/Repro.js"></script> -->
+   <script>
+   let x = document.querySelector('#zonarepro');
+   x.setAttribute("title", 'Editable');
+   x.setAttribute("description", 'Editable');
+   x.setAttribute("src",'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4');
+   x.setAttribute("controls",'true');
+   x.setAttribute("volume",'1');
+  
+   let y = document.querySelector('#zonaLista');
+   y.setAttribute("src",'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg');
+
+   let z = document.querySelector('#ZonaDrop');
+   z.setAttribute("size", 'editable');
+   z.setAttribute("height", '5px');
+   z.setAttribute("width", '5px');
+
+   function actuaSize (size){
+    z.setAttribute("size", size);
+    
+   }
+
+
+   function actuaVolumen(volume){
+       x.setAttribute("volume",volume);
+   }
+   </script>
+   
+    <!-- <script src="./Components/Drag&Drop/src/dragOndrop.js"></script> -->
+
+</body>
+</html>
